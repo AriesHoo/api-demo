@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aries.api.demo.mapper.UserMapper">
+    <!--parameterType(输入类型)、resultType(输出类型)-->
+    <select id="findUser" resultType="com.aries.api.demo.entity.UserEntity">
+        select 
+        	*
+        	,UNIX_TIMESTAMP(create_time) as create_date
+        from 
+        	t_user
+        where 
+        	((user_name = #{account} or phone = #{account})and password = #{password})
+        	or we_chat_open_id =#{openId} or qq_open_id =#{openId} ;
+    </select>
+    <select id="findUserById" resultType="com.aries.api.demo.entity.UserEntity">
+        select 
+        	*
+        	,UNIX_TIMESTAMP(create_time) as create_date
+        from 
+        	t_user
+        where
+        	id = #{account} or user_name = #{account} or phone = #{account}or we_chat_open_id = #{account}or qq_open_id = #{account};
+    </select>
+    <select id="getUserList" resultType="com.aries.api.demo.entity.UserEntity">
+        select
+        	*
+        	,UNIX_TIMESTAMP(create_time) as create_date
+        from
+        	t_user order by create_date desc
+    </select>
+
+    <update id="updateUserInfo">
+        UPDATE t_user
+        <set>
+            <if test="nickName != null">nick_name=#{nickName},</if>
+            <if test="headUrl != null">head_url=#{headUrl},</if>
+            <if test="password != null">password=#{password},</if>
+            <if test="phone != null">phone=#{phone},</if>
+            <if test="weChatId != null">we_chat_open_id=#{weChatId},</if>
+            <if test="qqId != null">qq_open_id=#{qqId},</if>
+            <if test="signature != null">signature=#{signature},</if>
+            <if test="loginTime != null">login_time=#{loginTime},</if>
+            modify_time=NOW()
+        </set>
+        where id = #{id} or user_name = #{id} or phone = #{id}or we_chat_open_id = #{id}or
+        qq_open_id = #{id};
+    </update>
+    <insert id="register">
+        INSERT INTO t_user (
+            id,
+            user_name,
+            password,
+            head_url,
+            we_chat_open_id,
+            qq_open_id,
+            create_time,
+            modify_time
+        )
+        VALUES
+            (
+                #{id},
+                #{account},
+                #{password},
+                #{headUrl},
+                #{weChatId},
+                #{qqId},
+                NOW(),
+                NOW()
+            );
+    </insert>
+</mapper>
