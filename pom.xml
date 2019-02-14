@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.aries.api</groupId>
-    <artifactId>demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>ApiDemo</name>
+    <artifactId>api-demo</artifactId>
+    <version>0.0.1</version>
+    <name>api-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan("com.aries.api.demo.mapper")
-public class ApiDemoApplication {
+public class ApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApiDemoApplication.class, args);
+        SpringApplication.run(ApiApplication.class, args);
     }
 
 }
