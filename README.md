@@ -1,4 +1,4 @@
-# api-demo-Spring boot + Mybatis + Mysql 搭建App端接口示例
+# api-demo-Spring boot + Mybatis + Mysql 搭建前端接口示例
 --------------------------
 
 [![](https://jitpack.io/v/AriesHoo/api-demo.svg)](https://jitpack.io/#AriesHoo/api-demo)
@@ -13,6 +13,7 @@
 解析文字请参看:
 
 [IDEA+Spring boot+Mybatis+Mysql 前端接口开发（一）工欲善其事必先利其器](https://www.jianshu.com/p/635f12854f6b)
+
 [IDEA+Spring boot+Mybatis+Mysql 前端接口开发（二）有的放矢](https://www.jianshu.com/p/0d0725d491a6)
 
 
