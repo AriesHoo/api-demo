@@ -3,18 +3,18 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/ah_test?useUnicode=true&amp&characterEncoding=utf-8 #注意设置编码格式
+    url: jdbc:mysql://localhost:3306/ah_test?useUnicode=true&amp&characterEncoding=utf-8&amp&serverTimezone=UTC  #注意设置编码及时区问题
     username: root
     password:
 
-# 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+# 该配置节点为独立的节点
 mybatis:
-  mapper-locations: classpath:mybatis/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
-  type-aliases-package: com.aries.testmysql.entity  # 注意：对应实体类的路径
+  mapper-locations: classpath:mybatis/*.xml  # 注意:一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.aries.api.demo.entity  # 注意:对应实体类的路径
   configuration:
-    map-underscore-to-camel-case: true #数据库字段下划线自动转驼峰
+    map-underscore-to-camel-case: true # 数据库字段下划线自动转驼峰
 
-#pagehelper分页插件
+# pagehelper分页插件
 pagehelper:
   helperDialect: mysql
   reasonable: true
