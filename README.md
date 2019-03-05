@@ -4,8 +4,8 @@
 [![](https://jitpack.io/v/AriesHoo/api-demo.svg)](https://jitpack.io/#AriesHoo/api-demo)
 [![GitHub license](https://img.shields.io/github/license/AriesHoo/api-demo.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![](https://img.shields.io/badge/简书-AriesHoo-blue.svg)](http://www.jianshu.com/u/a229eee96115)
-[![](https://img.shields.io/badge/简书解析-工欲善其事必先利其器-green.svg)](https://www.jianshu.com/p/635f12854f6b)
-[![](https://img.shields.io/badge/简书解析-有的放矢-purple.svg)](https://www.jianshu.com/p/0d0725d491a6)
+[![](https://img.shields.io/badge/简书解析（一）-工欲善其事必先利其器-green.svg)](https://www.jianshu.com/p/635f12854f6b)
+[![](https://img.shields.io/badge/简书解析（二）-有的放矢-purple.svg)](https://www.jianshu.com/p/0d0725d491a6)
 
 ## 简介：
 
